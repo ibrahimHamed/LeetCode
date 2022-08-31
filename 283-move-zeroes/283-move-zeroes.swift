@@ -1,18 +1,23 @@
 class Solution {
     func moveZeroes(_ nums: inout [Int]) {
-        var tempArray : [Int] = []
-        for num in nums {
-            if num != 0 {
-                tempArray.append(num)
+        // var zerosArray : [Int] = []
+        // var othersArray : [Int] = []
+        // for i in 0..<nums.count {
+        //     if nums[i] == 0 {
+        //         zerosArray.append(0)
+        //     } else {
+        //         othersArray.append(nums[i])
+        //     }
+        // }
+        // nums = othersArray + zerosArray
+        var p = 0
+        for i in 0..<nums.count {
+            if nums[i] != 0 {
+                nums.swapAt(p,i)
+                p += 1
             }
         }
-        
-        for num in nums {
-            if num == 0 {
-                tempArray.append(num)
-            }
-        }
-        
-        nums = tempArray
     }
 }
+
+// [0,1,0,3,12]
