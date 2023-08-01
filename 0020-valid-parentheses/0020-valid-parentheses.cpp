@@ -3,7 +3,7 @@ public:
     bool isValid(string s) {
         stack<char> charStack;
         
-        if (s[0] == '}' || s[0] == ']' || s[0] == ')') return 0;
+        // if (s[0] == '}' || s[0] == ']' || s[0] == ')') return 0;
         // charStack.push(s[0]);
         int i = 0;
        while(i < s.size())
